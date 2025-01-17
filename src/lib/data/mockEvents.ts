@@ -6,10 +6,10 @@
     date: "2024-07-15",
     location: "Central Park, NY",
     price: 0.1,
-    imageUrl: "/api/placeholder/800/400",
+    imageUrl: "/images/event1.jpg",
     category: "music",
     capacity: 1000,
-    organizer: "EventTix"
+    organizer: "Book-down"
   },
   {
     id: "2",
@@ -18,7 +18,7 @@
     date: "2024-08-20",
     location: "Convention Center, SF",
     price: 0.15,
-    imageUrl: "/api/placeholder/800/400",
+    imageUrl: "/images/event2.jpg",
     category: "conference",
     capacity: 500,
     organizer: "TechEvents"
@@ -30,7 +30,7 @@
     date: "2024-06-30",
     location: "Sports Arena, LA",
     price: 0.05,
-    imageUrl: "/api/placeholder/800/400",
+    imageUrl: "/images/event3.jpg",
     category: "sports",
     capacity: 2000,
     organizer: "Sports League"

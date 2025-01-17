@@ -65,9 +65,9 @@ const config = createConfig(
     walletConnectProjectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID!,
 
     // Application Metadata
-    appName: "EventTix",
+    appName: "Book-down",
     appDescription: "Web3 Event Ticketing Platform",
-    appUrl: "https://eventtix.com", // Replace with your actual domain
+    appUrl: "https://Book-down.com", // Replace with your actual domain
     appIcon: "/logo.png", // Add your logo to public directory
   }),
 );

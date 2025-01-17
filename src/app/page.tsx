@@ -36,7 +36,7 @@ export default async function Home() {
                 href="/events"
                 className="gradient-border inline-block"
               >
-                <span className="flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold hover-glow">
+                <span className="flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold hover-glow text-white">
                   Explore Events
                   <ArrowRight className="w-5 h-5" />
                 </span>

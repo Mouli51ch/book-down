@@ -7,7 +7,7 @@ import "./globals.css";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "EventTix - Web3 Event Ticketing",
+  title: "Book-down - Web3 Event Ticketing",
   description: "Book event tickets using blockchain technology",
 };
 
