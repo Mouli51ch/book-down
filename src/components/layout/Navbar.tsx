@@ -1,4 +1,7 @@
-﻿import Link from "next/link";
+﻿"use client";
+
+import Link from "next/link";
+import CustomConnectButton from "@/components/web3/CustomConnectButton";
 
 export default function Navbar() {
   return (
@@ -6,7 +9,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-white">
-            Book-Down
+            EventTix
           </Link>
           <div className="flex items-center gap-8">
             <Link 
@@ -18,10 +21,13 @@ export default function Navbar() {
             </Link>
             <Link 
               href="/events/create" 
-              className="bg-primary hover:bg-primary/90 text-black font-semibold px-4 py-2 rounded-lg transition-all hover-scale"
+              className="gradient-border"
             >
-              Create Event
+              <span className="flex items-center justify-center px-4 py-2 bg-black text-white font-semibold rounded-lg hover-glow transition-all duration-300">
+                Create Event
+              </span>
             </Link>
+            <CustomConnectButton />
           </div>
         </div>
       </div>
