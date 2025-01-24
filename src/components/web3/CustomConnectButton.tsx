@@ -1,40 +1,32 @@
-﻿"use client";
+﻿"use client"
 
-import { ConnectKitButton } from "connectkit";
-import { Wallet } from "lucide-react";
+import { useState } from "react"
+import { Wallet } from "lucide-react"
 
 export default function CustomConnectButton() {
+  const [isConnected, setIsConnected] = useState(false)
+  const mockAddress = "0x1234...5678"
+
+  const handleClick = () => {
+    setIsConnected(true)
+  }
+
   return (
-    <ConnectKitButton.Custom>
-      {({ isConnected, isConnecting, show, address, ensName }) => {
-        return (
-          <button
-            onClick={show}
-            className="relative group flex items-center gap-2 gradient-border"
-          >
-            <span className="flex items-center justify-center gap-2 px-4 py-2 font-semibold hover-glow bg-black rounded-lg transition-all duration-300">
-              {isConnected ? (
-                <>
-                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                  <span className="text-white">
-                    {ensName || `${address?.slice(0, 6)}...${address?.slice(-4)}`}
-                  </span>
-                </>
-              ) : isConnecting ? (
-                <>
-                  <div className="w-4 h-4 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
-                  <span className="text-white">Connecting...</span>
-                </>
-              ) : (
-                <>
-                  <Wallet className="w-4 h-4 text-primary" />
-                  <span className="text-white">Connect Wallet</span>
-                </>
-              )}
-            </span>
-          </button>
-        );
-      }}
-    </ConnectKitButton.Custom>
-  );
+    <button onClick={handleClick} className="relative group flex items-center gap-2 gradient-border">
+      <span className="flex items-center justify-center gap-2 px-4 py-2 font-semibold hover-glow bg-primary rounded-lg transition-all duration-300">
+        {isConnected ? (
+          <>
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span className="text-primary-foreground">{mockAddress}</span>
+          </>
+        ) : (
+          <>
+            <Wallet className="w-4 h-4 text-primary-foreground" />
+            <span className="text-primary-foreground">Connect Wallet</span>
+          </>
+        )}
+      </span>
+    </button>
+  )
 }
+
